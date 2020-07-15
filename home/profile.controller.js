@@ -95,11 +95,11 @@ class ProfileController {
     this.interests = [];
     this.ratingWidth = ((user.rating / 5) * 100);
     user.Likes.forEach((item, index) => {
-      var obj = {};
-      obj['like'] = item;
-      obj['dislike'] = user.Dislikes[index] ? user.Dislikes[index] : '';
-      if (obj) {
-        this.interests.push(obj);
+      let interest = {};
+      interest['like'] = item;
+      interest['dislike'] = user.Dislikes[index] ? user.Dislikes[index] : '';
+      if (interest) {
+        this.interests.push(interest);
       }
     });
   };
