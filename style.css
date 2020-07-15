@@ -1,0 +1,78 @@
+/* Styles go here */
+.contactUser{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header-section {
+  display:flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  height: 40px;
+}
+.split-section {
+  display:flex;
+}
+.search-box {
+  align-items: left;
+  padding-top: 10px;
+  padding-left: 10px;
+  height:10px;
+}
+.header-img {
+  width: 40px;
+  height: 40px;
+}
+.star-ratings-sprite {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+  font-size: 0;
+  height: 21px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 110px;
+  margin: 0 auto;
+}
+.star-ratings-sprite-rating {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+  background-position: 0 100%;
+  float: left;
+  height: 21px;
+  display: block;
+}
+.stripped {
+  background-color: rgba(128, 128, 128, 0.432);
+}
+.user-info {
+  display: flex;
+  justify-content: flex-end;
+}
+.user-list {
+  border: 1px solid black;
+  border-top: none;
+  padding: 50px 10px;
+}
+.userRatings {
+  display:flex;
+  width:60%;
+}
+.user-listSection {
+  display:flex;
+}
+.user-descImg {
+  width: 100px;
+  height: 100px;
+}
+.user-details {
+  padding-top: 30px;
+  padding-left: 30px;
+}
+
+.user-displayName {
+  padding-top: 10px;
+  padding-right: 5px;
+}
+
+table, td, th {
+    border: 1px solid black;
+}

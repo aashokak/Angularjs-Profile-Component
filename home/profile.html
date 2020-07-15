@@ -1,0 +1,46 @@
+<body>
+
+	<div class="profile" ng-controller="ProfileController">
+		<div class="header-section">
+			<div class="search-box">
+				<input type="text" ng-model="searchString" placeholder="Search"/>
+      </div>
+				<div class="user-info" ng-if="$ctrl.displayUserDetails">
+					<span class="user-displayName">{{$ctrl.userDetails.name}}</span>
+					<img class="header-img" ng-src="{{$ctrl.userDetails.img}}">
+      </div>
+				</div>
+				<div class="user-listSection">
+					<div class="split-section">
+						<div class="userListName">
+							<div class="user-list" ng-repeat="user in $ctrl.peopleData | filter:searchString"
+								ng-click="$ctrl.showUserDetails(user)">{{user.name}}</div>
+						</div>
+						<div class="user-details" ng-if="$ctrl.displayUserDetails">
+							<div class="userRatings">
+								<img class="user-descImg" ng-src="{{$ctrl.userDetails.img}}">
+								<div class="contactUser">
+									<button>Send Message</button>
+									<div class="star-ratings-sprite">
+										<div style="width:{{$ctrl.ratingWidth}}%" class="star-ratings-sprite-rating">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="user-description">{{$ctrl.userDetails.Description}}</div>
+							<table>
+								<tr>
+									<th>Likes</th>
+									<th>DisLikes</th>
+								</tr>
+								<tr ng-repeat="interest in $ctrl.interests" ng-class="{ 'stripped': $odd }">
+									<td>{{interest.like}}</td>
+									<td>{{interest.dislike}}</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+</body>
